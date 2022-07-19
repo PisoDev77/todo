@@ -1,0 +1,5 @@
+@import url("./nav/nav.css");
+
+#root{
+    min-width: 250px;
+}

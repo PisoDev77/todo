@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "useDefineForClassFields": true,
+      "module": "ESNext",
+      "noImplicitAny": true,
+      "strictNullChecks": true
+    },
+}
+  
