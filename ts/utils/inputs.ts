@@ -1,5 +1,6 @@
 
 const inputs = {
+    //input 속성들은 객체로 받아서 넣어준 뒤 반환해주는 함수
     makeInput: (props: object) => {
         const input = document.createElement("input");
 

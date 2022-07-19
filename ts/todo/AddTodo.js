@@ -5,7 +5,10 @@ export default function AddTodo(todo) {
         return;
     }
     else {
-        console.log(addTodo);
+        const todos = document.querySelector("#todos");
+        const div = document.createElement("section");
+        div.innerText = addTodo;
+        todos?.appendChild(div);
     }
 }
 ;
