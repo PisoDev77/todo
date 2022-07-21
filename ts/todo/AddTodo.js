@@ -1,3 +1,4 @@
+import TodoView from "./TodoView.js";
 export default function AddTodo(todo) {
     const addTodo = todo.todo.value;
     if (addTodo.trim() === "") {
@@ -5,10 +6,14 @@ export default function AddTodo(todo) {
         return;
     }
     else {
+        const data = {
+            content: addTodo,
+            regDate: new Date(),
+            modiDate: undefined,
+        };
         const todos = document.querySelector("#todos");
-        const div = document.createElement("section");
-        div.innerText = addTodo;
-        todos?.appendChild(div);
+        const todoSection = TodoView(data);
+        todos?.appendChild(todoSection);
     }
 }
 ;

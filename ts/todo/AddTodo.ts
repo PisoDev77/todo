@@ -1,3 +1,5 @@
+import TodoView from "./TodoView.js";
+import {todoType} from "../type/todoTypes.js";
 
 export default function AddTodo(todo: HTMLFormElement){
     const addTodo: string = todo.todo.value;
@@ -6,11 +8,17 @@ export default function AddTodo(todo: HTMLFormElement){
         console.log("쪼렙");
         return;
     }else{
+
+        const data: todoType = {
+            content: addTodo,
+            regDate: new Date(),
+            modiDate: undefined,
+        }
         const todos = document.querySelector("#todos");
 
-        const div = document.createElement("section");
-        div.innerText = addTodo;
+        const todoSection = TodoView(data);
+        
 
-        todos?.appendChild(div);
+        todos?.appendChild(todoSection);
     }
 };

@@ -1,6 +1,7 @@
 import input from "../utils/inputs.js";
 import AddTodo from "./AddTodo.js";
 
+
 export default function Todo(){
     const res = document.createElement("form");
 
